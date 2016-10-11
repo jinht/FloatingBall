@@ -14,9 +14,9 @@
 // 停留方式
 typedef NS_ENUM(NSInteger, StayMode) {
     // 四周均可停靠
-    StayMode_Around = 0,
+    stayMode_Around = 0,
     // 只能停靠左右两侧
-    StayMode_OnlyLeftAndRight = 1
+    stayMode_OnlyLeftAndRight = 1
 };
 
 /** 可以拖动的ImageView */

@@ -46,6 +46,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
     UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
     fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width*0.65, suspendedBallImage.size.height*0.65);
+//    fb.stayAlpha = 0.7;
     fb.image = suspendedBallImage;
     [self.view addSubview:fb];
     
