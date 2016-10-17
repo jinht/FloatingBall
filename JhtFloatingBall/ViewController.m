@@ -30,7 +30,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     // 设置背景颜色
     self.view.backgroundColor = UIColorFromRGB(0xCCBBAA);
     
-    //    self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.title = @"JhtFloatingBall";
     
@@ -46,22 +45,21 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
     UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
     fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width*0.65, suspendedBallImage.size.height*0.65);
-//    fb.stayAlpha = 0.7;
     fb.image = suspendedBallImage;
+//    fb.stayAlpha = 0.7;
+//    fb.stayMode = stayMode_OnlyLeftAndRight;
     [self.view addSubview:fb];
     
     // 添加点击手势
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dragImageViewTap:)];
-    tapGesture.delegate = self;
-    [fb addGestureRecognizer:tapGesture];
+    UITapGestureRecognizer *fbGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fbTap:)];
+    fbGesture.delegate = self;
+    [fb addGestureRecognizer:fbGesture];
 }
 
-/** dragImageView点击 事件 */
-- (void)dragImageViewTap:(UITapGestureRecognizer *)ges {
-    NSLog(@"dragImageView 被点击了哈，爱管不管！！！");
+/** fb点击 事件 */
+- (void)fbTap:(UITapGestureRecognizer *)ges {
+    NSLog(@"fb 被点击了哈，爱管不管！！！");
 }
-
-
 
 
 
