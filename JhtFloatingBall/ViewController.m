@@ -34,20 +34,20 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     self.navigationItem.title = @"JhtFloatingBall";
     
     // 添加dragImageView
-    [self addDragImageView];
+    [self addFolatingball];
 }
 
 
 
-#pragma mark - 添加dragImageView
-/** 添加dragImageView */
-- (void)addDragImageView {
+#pragma mark - 添加addFolatingball
+/** 添加addFolatingball */
+- (void)addFolatingball {
     JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
     UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
     fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width*0.65, suspendedBallImage.size.height*0.65);
     fb.image = suspendedBallImage;
-//    fb.stayAlpha = 0.7;
-//    fb.stayMode = stayMode_OnlyLeftAndRight;
+    //    fb.stayAlpha = 0.7;
+    //    fb.stayMode = stayMode_OnlyLeftAndRight;
     [self.view addSubview:fb];
     
     // 添加点击手势
@@ -60,6 +60,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)fbTap:(UITapGestureRecognizer *)ges {
     NSLog(@"fb 被点击了哈，爱管不管！！！");
 }
+
+
 
 
 
