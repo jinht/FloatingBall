@@ -1,9 +1,10 @@
 # FloatingBall
 
-### 1. 这是一个类似于iOS系统自带的AssistiveTouch/京东《我的》部分的辅助按钮  <br>
+### Function Description
+#### 1. 这是一个类似于iOS系统自带的AssistiveTouch/京东《我的》部分的辅助按钮  <br>
 <img src="https://raw.githubusercontent.com/jinht/FloatingBall/master/ReadMEImages/JhtFloatingBall.gif"  width=250 height=445 /> <br>
  
-### 2. 使用起来比较方便，只需导入 `JhtFloatingBall.h` 头文件即可  <br>
+#### 2. 使用起来比较方便，只需导入 `JhtFloatingBall.h` 头文件即可  <br>
 (1) 简单的初始化<br>
 ```oc
 JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
@@ -32,7 +33,8 @@ typedef NS_ENUM(NSInteger, StayMode) {
 @property (nonatomic, assign) CGFloat stayAlpha;
 ```
 
-* 注：创建成功后，可以根据自己的需求添加相应的事件！
+* 注：创建成功后，可以根据自己的需求添加相应的事件
+
 
 ###Remind
 * ARC
