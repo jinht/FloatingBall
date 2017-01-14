@@ -44,10 +44,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)addFolatingball {
     JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
     UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
-    fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width*0.65, suspendedBallImage.size.height*0.65);
+    fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height*0.65);
     fb.image = suspendedBallImage;
-    //    fb.stayAlpha = 0.7;
-    //    fb.stayMode = stayMode_OnlyLeftAndRight;
+//    fb.stayAlpha = 0.7;
+//    fb.stayMode = stayMode_OnlyLeftAndRight;
     [self.view addSubview:fb];
     
     // 添加点击手势
