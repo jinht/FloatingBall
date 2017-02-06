@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger, StayMode) {
 * 注：创建成功后，可以根据自己的需求添加相应的事件
 
 
-###Remind
+### Remind
 * ARC
 * iOS >= 8.0
 * iPhone \ iPad 
