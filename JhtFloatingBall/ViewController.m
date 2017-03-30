@@ -17,7 +17,7 @@
 @end
 
 
-/** 颜色转换  例:#000000 UIColorFromRGB(0x000000) */
+/** 颜色转换  例：#000000 UIColorFromRGB(0x000000) */
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
@@ -43,9 +43,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #pragma mark - 添加addFolatingball
 /** 添加addFolatingball */
 - (void)addFolatingball {
-    JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
     UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
-    fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65);
+    JhtFloatingBall *fb = [[JhtFloatingBall alloc] initWithFrame:CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65)];
     fb.image = suspendedBallImage;
 //    fb.stayAlpha = 0.7;
 //    fb.stayMode = stayMode_OnlyLeftAndRight;
