@@ -2,7 +2,7 @@
 
 ### Function Description
 #### 这是一个类似于iOS系统自带的AssistiveTouch/京东《我的》部分的悬浮按钮等类型的辅助按钮，具体处理逻辑同AssistiveTouch <br>
-<img src="https://raw.githubusercontent.com/jinht/FloatingBall/master/ReadMEImages/JhtFloatingBall.gif" width=250 height=445 /> <br>
+<img src="https://raw.githubusercontent.com/jinht/FloatingBall/master/ReadMEImages/JhtFloatingBall.gif" width=230 height=410 /> <br>
  
  
 ### How to use
