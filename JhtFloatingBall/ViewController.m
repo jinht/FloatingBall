@@ -12,7 +12,7 @@
 #import "ViewController.h"
 #import "JhtFloatingBall.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate>
+@interface ViewController () <UIGestureRecognizerDelegate, JhtFloatingBallDelegate>
 
 @end
 
@@ -46,18 +46,17 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
     JhtFloatingBall *fb = [[JhtFloatingBall alloc] initWithFrame:CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65)];
     fb.image = suspendedBallImage;
-//    fb.stayAlpha = 0.7;
+    fb.stayAlpha = 0.5;
+    fb.delegate = self;
 //    fb.stayMode = stayMode_OnlyLeftAndRight;
     [self.view addSubview:fb];
-    
-    // 添加点击手势
-    UITapGestureRecognizer *fbGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fbTap:)];
-    fbGesture.delegate = self;
-    [fb addGestureRecognizer:fbGesture];
 }
 
+
+
+#pragma mark - JhtFloatingBallDelegate
 /** fb点击 事件 */
-- (void)fbTap:(UITapGestureRecognizer *)ges {
+- (void)tapFloatingBall {
     NSLog(@"fb 被点击了哈，爱管不管！！！");
 }
 
