@@ -11,8 +11,7 @@
  
  
 ### How to use
-#### 导入 `JhtFloatingBall.h` 头文件  <br>
-(1) 简单的初始化<br>
+#### 1. 简单的初始化<br>
 ```oc
 JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
 UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
@@ -21,7 +20,7 @@ fb.image = suspendedBallImage;
 [self.view addSubview:fb];
 ```
 
-(2) 悬浮球停靠的方式 <br>
+#### 2. 悬浮球停靠的方式 <br>
 ```oc
 // 停留方式
 typedef NS_ENUM(NSInteger, StayMode) {
@@ -34,7 +33,7 @@ typedef NS_ENUM(NSInteger, StayMode) {
 @property (nonatomic, assign) StayMode stayMode;
 ```
 
-(3) 选配项 <br>
+#### 3. 选配项 <br>
 ```oc
 /** 是否需要延迟改变alpha（效果类似不AssistiveTouch）
  *	default：YES
