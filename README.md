@@ -1,10 +1,17 @@
 ## FloatingBall
 
-### Function Description
-#### 1. 这是一个类似于iOS系统自带的AssistiveTouch/京东《我的》部分的辅助按钮  <br>
+### 一言不合就上图
 <img src="https://raw.githubusercontent.com/jinht/FloatingBall/master/ReadMEImages/JhtFloatingBall.gif" width=250 height=445 /> <br>
+
+
+### Function Description
+ 1. 轻量级UI控件
+ 2. 辅助按钮/悬浮球(AssistiveTouch)
+ 3. 支持两种停靠方式及相关自定义设置
  
-#### 2. 使用起来比较方便，只需导入 `JhtFloatingBall.h` 头文件即可  <br>
+ 
+### How to use
+#### 导入 `JhtFloatingBall.h` 头文件  <br>
 (1) 简单的初始化<br>
 ```oc
 JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
@@ -14,7 +21,7 @@ fb.image = suspendedBallImage;
 [self.view addSubview:fb];
 ```
 
-(2) 设置悬浮球停留的方式 <br>
+(2) 悬浮球停靠的方式 <br>
 ```oc
 // 停留方式
 typedef NS_ENUM(NSInteger, StayMode) {
@@ -27,13 +34,19 @@ typedef NS_ENUM(NSInteger, StayMode) {
 @property (nonatomic, assign) StayMode stayMode;
 ```
 
-(3) 设置悬浮球停留时的透明度 <br>
+(3) 选配项 <br>
 ```oc
-/** 悬浮球停留时的透明度（stayAlpha >= 0，1：不透明，默认为不透明） */
+/** 是否需要延迟改变alpha（效果类似不AssistiveTouch）
+ *	default：YES
+ */
+@property (nonatomic, assign) BOOL shouldDelayChangeAlpha;
+/** 悬浮球停留时的透明度（stayAlpha >= 0，1：不透明）
+ *  default：不透明
+ */
 @property (nonatomic, assign) CGFloat stayAlpha;
 ```
 
-* 注：创建成功后，可以根据自己的需求添加相应的事件
+* 具体使用详见demo
 
 
 ### Remind
