@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-// 停留方式
+// 停靠方式
 typedef NS_ENUM(NSInteger, Jht_StayMode) {
     // 四周均可停靠（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
     stayMode_Around = 0,
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
 @interface JhtFloatingBall : UIImageView
 #pragma mark - property
 #pragma mark optional
-/** 悬浮球停留的方式
+/** 悬浮球停靠方式
  *  default：StayMode_Around（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
  */
 @property (nonatomic, assign) Jht_StayMode stayMode;
