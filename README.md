@@ -13,11 +13,10 @@
 ### How to use
 #### 1. 简单的初始化<br>
 ```oc
-JhtFloatingBall *fb = [[JhtFloatingBall alloc] init];
-UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
-fb.frame = CGRectMake(0, 20, suspendedBallImage.size.width*0.65, suspendedBallImage.size.height*0.65);
-fb.image = suspendedBallImage;
-[self.view addSubview:fb];
+    UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
+    JhtFloatingBall *fb = [[JhtFloatingBall alloc] initWithFrame:CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65)];
+    fb.image = suspendedBallImage;
+    [self.view addSubview:fb];
 ```
 
 #### 2. 悬浮球停靠的方式 <br>
