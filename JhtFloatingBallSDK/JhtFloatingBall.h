@@ -6,19 +6,23 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 16/10/10.
-//  Copyright © 2016年 靳海涛. All rights reserved.
+//  Copyright © 2016年 JhtFloatingBall. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 // 停靠方式
 typedef NS_ENUM(NSInteger, Jht_StayMode) {
-    // 四周均可停靠（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
+    // 四周停靠（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
     stayMode_Around = 0,
-    // 只能停靠左右两侧
-    stayMode_OnlyLeftAndRight = 1
+    // 左侧停靠
+    stayMode_OnlyLeft,
+    // 右侧停靠
+    stayMode_OnlyRight,
+    // 左右两侧停靠
+    stayMode_OnlyLeftAndRight
+    
 };
-
 
 #pragma mark - protocol
 @protocol JhtFloatingBallDelegate <NSObject>
@@ -37,7 +41,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
  */
 @property (nonatomic, assign) Jht_StayMode stayMode;
 
-/** 是否需要延迟改变alpha（效果类似不AssistiveTouch）
+/** 是否需要延迟改变alpha（效果类似于AssistiveTouch）
  *	default：YES
  */
 @property (nonatomic, assign) BOOL shouldDelayChangeAlpha;
