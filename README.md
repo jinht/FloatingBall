@@ -21,15 +21,21 @@ fb.image = suspendedBallImage;
 
 #### 2. 悬浮球停靠的方式 <br>
 ```oc
-// 停留方式
-typedef NS_ENUM(NSInteger, StayMode) {
-    // 四周均可停靠
-    StayMode_Around = 0,
-    // 只能停靠左右两侧
-    StayMode_OnlyLeftAndRight = 1
+// 停靠方式
+typedef NS_ENUM(NSInteger, Jht_StayMode) {
+    // 四周停靠（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
+    stayMode_Around = 0,
+    // 左侧停靠
+    stayMode_OnlyLeft,
+    // 右侧停靠
+    stayMode_OnlyRight,
 };
-/** 悬浮球停留的方式(默认为StayMode_Around) */
-@property (nonatomic, assign) StayMode stayMode;
+
+/** 悬浮球停靠方式
+ *  default：StayMode_Around（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
+ *  请注意 起始点 的设置不要与 停靠方式 的一致性
+ */
+@property (nonatomic, assign) Jht_StayMode stayMode;
 ```
 
 #### 3. 选配项 <br>
