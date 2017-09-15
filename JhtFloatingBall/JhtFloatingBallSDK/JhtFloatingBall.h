@@ -19,9 +19,6 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
     stayMode_OnlyLeft,
     // 右侧停靠
     stayMode_OnlyRight,
-    // 左右两侧停靠
-    stayMode_OnlyLeftAndRight
-    
 };
 
 #pragma mark - protocol
@@ -38,6 +35,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
 #pragma mark optional
 /** 悬浮球停靠方式
  *  default：StayMode_Around（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
+ *	请注意 起始点 的设置不要与 停靠方式 的一致性
  */
 @property (nonatomic, assign) Jht_StayMode stayMode;
 
