@@ -1,0 +1,6 @@
+framework module JhtFloatingBall {
+  umbrella header "JhtFloatingBall.h"
+
+  export *
+  module * { export * }
+}

@@ -10,7 +10,7 @@
 //
 
 #import "ViewController.h"
-#import "JhtFloatingBall.h"
+#import <JhtFloatingBall/JhtFloatingBall.h>
 
 @interface ViewController () <UIGestureRecognizerDelegate, JhtFloatingBallDelegate>
 

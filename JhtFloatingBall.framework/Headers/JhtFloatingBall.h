@@ -14,11 +14,11 @@
 // 停靠方式
 typedef NS_ENUM(NSInteger, Jht_StayMode) {
     // 四周停靠（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
-    stayMode_Around = 0,
+    StayMode_Around = 0,
     // 左侧停靠
-    stayMode_OnlyLeft,
+    StayMode_OnlyLeft,
     // 右侧停靠
-    stayMode_OnlyRight,
+    StayMode_OnlyRight,
 };
 
 #pragma mark - protocol
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
  */
 @property (nonatomic, assign) Jht_StayMode stayMode;
 
-/** 是否需要延迟改变alpha（效果类似于AssistiveTouch）
+/** 是否需要 停靠后 延迟改变alpha（效果类似于AssistiveTouch）
  *	default：YES
  */
 @property (nonatomic, assign) BOOL shouldDelayChangeAlpha;
