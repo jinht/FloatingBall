@@ -10,9 +10,15 @@
 //
 
 #import "ViewController.h"
-#import <JhtFloatingBall/JhtFloatingBall.h>
+#import "JhtFloatingBall.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate, JhtFloatingBallDelegate>
+/** 屏幕 宽度 */
+#define FrameW [UIScreen mainScreen].bounds.size.width
+
+@interface ViewController () <JhtFloatingBallDelegate>
+
+/** folatingball */
+@property (nonatomic, strong) JhtFloatingBall *folatingball;
 
 @end
 
@@ -28,36 +34,72 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置背景颜色
-    self.view.backgroundColor = UIColorFromRGB(0xCCBBAA);
-    
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationItem.title = @"JhtFloatingBall";
-    
-    // 添加dragImageView
-    [self addFolatingball];
+    // 创建UI界面
+    [self createUI];
 }
 
 
 
-#pragma mark - 添加addFolatingball
-/** 添加addFolatingball */
-- (void)addFolatingball {
-    UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
-    JhtFloatingBall *fb = [[JhtFloatingBall alloc] initWithFrame:CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65)];
-    fb.image = suspendedBallImage;
-    fb.stayAlpha = 0.6;
-    fb.delegate = self;
-//    fb.stayMode = (stayMode_OnlyLeft | stayMode_OnlyRight);
-    [self.view addSubview:fb];
+#pragma mark - UI
+/** 创建UI界面 */
+- (void)createUI {
+    self.view.backgroundColor = UIColorFromRGB(0xCCBBAA);
+    
+    self.navigationController.navigationBar.translucent = NO;
+    self.title = @"JhtFloatingBall";
+    
+    // 添加folatingball
+    [self.view addSubview:self.folatingball];
+    
+    // 添加《Dismiss》按钮
+    [self addDismissButton];
+}
+
+
+
+#pragma mark DismissButton
+/** 添加《Dismiss》按钮 */
+- (void)addDismissButton {
+    CGFloat backBtnW = 80.0;
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(FrameW - backBtnW - 10, 330, backBtnW, 30)];
+    
+    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [backBtn setTitle:@"Dismiss" forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backBtn];
+}
+
+- (void)backBtnClick {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
+
+#pragma mark - Get
+/** folatingball */
+- (JhtFloatingBall *)folatingball {
+    if (!_folatingball) {
+        UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
+        _folatingball = [[JhtFloatingBall alloc] initWithFrame:CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65)];
+        
+        _folatingball.image = suspendedBallImage;
+        _folatingball.stayAlpha = 0.6;
+        _folatingball.delegate = self;
+        // 左右两侧停靠
+//        _folatingball.stayMode = (StayMode_OnlyLeft | StayMode_OnlyRight);
+    }
+    
+    return _folatingball;
 }
 
 
 
 #pragma mark - JhtFloatingBallDelegate
-/** fb点击 事件 */
+/** folatingball点击 事件 */
 - (void)tapFloatingBall {
-    NSLog(@"fb 被点击了哈，爱管不管！！！");
+    NSLog(@"folatingball 被点击了哈，爱管不管！！！");
 }
 
 
