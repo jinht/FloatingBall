@@ -10,26 +10,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JhtFloatingBall_Define.h"
+#import "JhtFloatingBallDelegate.h"
 
-// 停靠方式
-typedef NS_ENUM(NSInteger, Jht_StayMode) {
-    // 四周停靠（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
-    StayMode_Around = 0,
-    // 左侧停靠
-    StayMode_OnlyLeft,
-    // 右侧停靠
-    StayMode_OnlyRight,
-};
-
-#pragma mark - protocol
-@protocol JhtFloatingBallDelegate <NSObject>
-/** 点击悬浮球 */
-- (void)tapFloatingBall;
-
-@end
-
-
-/** 可以拖动的ImageView */
+/** JhtFloatingBall */
 @interface JhtFloatingBall : UIImageView
 #pragma mark - property
 #pragma mark optional
@@ -43,7 +27,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
  *	default：YES
  */
 @property (nonatomic, assign) BOOL shouldDelayChangeAlpha;
-/** 悬浮球停留时的透明度（stayAlpha >= 0，1：不透明）
+/** 悬浮球停留时 透明度（stayAlpha >= 0，1：不透明）
  *  default：不透明
  */
 @property (nonatomic, assign) CGFloat stayAlpha;

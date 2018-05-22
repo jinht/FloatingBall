@@ -34,14 +34,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 创建UI界面
+    // CreateUI
     [self createUI];
 }
 
 
 
 #pragma mark - UI
-/** 创建UI界面 */
+/** CreateUI */
 - (void)createUI {
     self.view.backgroundColor = UIColorFromRGB(0xCCBBAA);
     
@@ -50,29 +50,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     // 添加folatingball
     [self.view addSubview:self.folatingball];
-    
-    // 添加《Dismiss》按钮
-    [self addDismissButton];
-}
-
-
-
-#pragma mark DismissButton
-/** 添加《Dismiss》按钮 */
-- (void)addDismissButton {
-    CGFloat backBtnW = 80.0;
-    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(FrameW - backBtnW - 10, 330, backBtnW, 30)];
-    
-    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [backBtn setTitle:@"Dismiss" forState:UIControlStateNormal];
-    [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backBtn];
-}
-
-- (void)backBtnClick {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
 }
 
 
