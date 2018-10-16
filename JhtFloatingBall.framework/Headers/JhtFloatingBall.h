@@ -18,21 +18,20 @@
 #pragma mark - property
 #pragma mark optional
 /** 悬浮球停靠方式
- *  default：StayMode_Around（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
+ *  default: StayMode_Around（优先考虑左右两侧，具体处理逻辑同AssistiveTouch）
  *	请注意 起始点 与 停靠方式 的一致性
  */
 @property (nonatomic, assign) Jht_StayMode stayMode;
 
 /** 是否需要 停靠后 延迟改变alpha（效果类似于AssistiveTouch）
- *	default：YES
+ *	default: YES
  */
 @property (nonatomic, assign) BOOL shouldDelayChangeAlpha;
-/** 悬浮球停留时 透明度（stayAlpha >= 0，1：不透明）
- *  default：不透明
+/** 悬浮球停留时 透明度（stayAlpha >= 0，1: 不透明）
+ *  default: 不透明
  */
 @property (nonatomic, assign) CGFloat stayAlpha;
 
-/** 委托 */
 @property (nonatomic, weak) id<JhtFloatingBallDelegate> delegate;
 
 
