@@ -11,7 +11,20 @@
  
  
 ### How to use
-#### 1. 简单的初始化<br>
+#### 1. 
+```oc
+platform:ios, '8.0'
+
+target 'JhtFloatingBall' do
+
+pod 'JhtFloatingBall', '~> 1.0.0'
+        
+end
+
+```
+
+
+#### 2. 简单的初始化
 ```oc
 UIImage *suspendedBallImage = [UIImage imageNamed:@"SuspendedBall"];
 JhtFloatingBall *fb = [[JhtFloatingBall alloc] initWithFrame:CGRectMake(0, 20, suspendedBallImage.size.width * 0.65, suspendedBallImage.size.height * 0.65)];
@@ -19,7 +32,7 @@ fb.image = suspendedBallImage;
 [self.view addSubview:fb];
 ```
 
-#### 2. 悬浮球停靠的方式 <br>
+#### 3. 悬浮球停靠的方式 <br>
 ```oc
 // 停靠方式
 typedef NS_ENUM(NSInteger, Jht_StayMode) {
@@ -38,7 +51,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
 @property (nonatomic, assign) Jht_StayMode stayMode;
 ```
 
-#### 3. 选配项 <br>
+#### 4. 选配项 <br>
 ```oc
 /** 是否需要延迟改变alpha（效果类似不AssistiveTouch）
  *	default：YES
@@ -50,7 +63,7 @@ typedef NS_ENUM(NSInteger, Jht_StayMode) {
 @property (nonatomic, assign) CGFloat stayAlpha;
 ```
 
-* 具体使用详见demo
+* 具体使用详见demo（使用demo之前请先 **pod install** ）
 
 
 ### Remind
