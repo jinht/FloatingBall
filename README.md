@@ -11,7 +11,7 @@
  
  
 ### How to use
-#### 1. 
+#### 1. podfile
 ```oc
 platform:ios, '8.0'
 
