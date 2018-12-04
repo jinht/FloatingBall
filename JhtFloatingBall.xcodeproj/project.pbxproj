@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A52039D01F7C98E000272F6F /* JhtFloatingBall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52039CF1F7C98D700272F6F /* JhtFloatingBall.framework */; };
+		8754BD7E7721C1277BCBA330 /* libPods-JhtFloatingBall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053870E4DF5FE03653BC4306 /* libPods-JhtFloatingBall.a */; };
 		A53A38851DAB80C4000CC1B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A53A38841DAB80C4000CC1B8 /* main.m */; };
 		A53A38881DAB80C4000CC1B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A53A38871DAB80C4000CC1B8 /* AppDelegate.m */; };
 		A53A388B1DAB80C4000CC1B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53A388A1DAB80C4000CC1B8 /* ViewController.m */; };
 		A53A388E1DAB80C4000CC1B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53A388C1DAB80C4000CC1B8 /* Main.storyboard */; };
 		A53A38901DAB80C4000CC1B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53A388F1DAB80C4000CC1B8 /* Assets.xcassets */; };
 		A53A38931DAB80C4000CC1B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53A38911DAB80C4000CC1B8 /* LaunchScreen.storyboard */; };
-		A53A389E1DAB80C5000CC1B8 /* JhtFloatingBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A53A389D1DAB80C5000CC1B8 /* JhtFloatingBallTests.m */; };
-		A53A38A91DAB80C5000CC1B8 /* JhtFloatingBallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A53A38A81DAB80C5000CC1B8 /* JhtFloatingBallUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053870E4DF5FE03653BC4306 /* libPods-JhtFloatingBall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JhtFloatingBall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6D64F7A43203E5972CF5E7 /* Pods-JhtFloatingBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JhtFloatingBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-JhtFloatingBall/Pods-JhtFloatingBall.release.xcconfig"; sourceTree = "<group>"; };
+		41C89FBE838AE53681956C60 /* Pods-JhtFloatingBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JhtFloatingBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JhtFloatingBall/Pods-JhtFloatingBall.debug.xcconfig"; sourceTree = "<group>"; };
 		A52039CA1F7BB5AC00272F6F /* JhtMarquee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JhtMarquee.framework; path = ../Marquee/JhtMarquee.framework; sourceTree = "<group>"; };
-		A52039CF1F7C98D700272F6F /* JhtFloatingBall.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JhtFloatingBall.framework; sourceTree = "<group>"; };
 		A53A38801DAB80C4000CC1B8 /* JhtFloatingBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhtFloatingBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53A38841DAB80C4000CC1B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A53A38861DAB80C4000CC1B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,11 +49,7 @@
 		A53A38921DAB80C4000CC1B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A53A38941DAB80C4000CC1B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A53A38991DAB80C5000CC1B8 /* JhtFloatingBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtFloatingBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A53A389D1DAB80C5000CC1B8 /* JhtFloatingBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtFloatingBallTests.m; sourceTree = "<group>"; };
-		A53A389F1DAB80C5000CC1B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A53A38A41DAB80C5000CC1B8 /* JhtFloatingBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtFloatingBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A53A38A81DAB80C5000CC1B8 /* JhtFloatingBallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtFloatingBallUITests.m; sourceTree = "<group>"; };
-		A53A38AA1DAB80C5000CC1B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52039D01F7C98E000272F6F /* JhtFloatingBall.framework in Frameworks */,
+				8754BD7E7721C1277BCBA330 /* libPods-JhtFloatingBall.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,10 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		648254A74B0AEA17C2128839 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41C89FBE838AE53681956C60 /* Pods-JhtFloatingBall.debug.xcconfig */,
+				3F6D64F7A43203E5972CF5E7 /* Pods-JhtFloatingBall.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A52039C81F7BB44200272F6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A52039CA1F7BB5AC00272F6F /* JhtMarquee.framework */,
+				053870E4DF5FE03653BC4306 /* libPods-JhtFloatingBall.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,12 +99,10 @@
 		A53A38771DAB80C4000CC1B8 = {
 			isa = PBXGroup;
 			children = (
-				A52039CF1F7C98D700272F6F /* JhtFloatingBall.framework */,
 				A53A38821DAB80C4000CC1B8 /* JhtFloatingBall */,
-				A53A389C1DAB80C5000CC1B8 /* JhtFloatingBallTests */,
-				A53A38A71DAB80C5000CC1B8 /* JhtFloatingBallUITests */,
 				A53A38811DAB80C4000CC1B8 /* Products */,
 				A52039C81F7BB44200272F6F /* Frameworks */,
+				648254A74B0AEA17C2128839 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,24 +140,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A53A389C1DAB80C5000CC1B8 /* JhtFloatingBallTests */ = {
-			isa = PBXGroup;
-			children = (
-				A53A389D1DAB80C5000CC1B8 /* JhtFloatingBallTests.m */,
-				A53A389F1DAB80C5000CC1B8 /* Info.plist */,
-			);
-			path = JhtFloatingBallTests;
-			sourceTree = "<group>";
-		};
-		A53A38A71DAB80C5000CC1B8 /* JhtFloatingBallUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A53A38A81DAB80C5000CC1B8 /* JhtFloatingBallUITests.m */,
-				A53A38AA1DAB80C5000CC1B8 /* Info.plist */,
-			);
-			path = JhtFloatingBallUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,6 +147,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A53A38AD1DAB80C5000CC1B8 /* Build configuration list for PBXNativeTarget "JhtFloatingBall" */;
 			buildPhases = (
+				4EAE526EA8652CB274678946 /* [CP] Check Pods Manifest.lock */,
 				A53A387C1DAB80C4000CC1B8 /* Sources */,
 				A53A387D1DAB80C4000CC1B8 /* Frameworks */,
 				A53A387E1DAB80C4000CC1B8 /* Resources */,
@@ -221,7 +208,7 @@
 				TargetAttributes = {
 					A53A387F1DAB80C4000CC1B8 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BY48QUJK83;
+						DevelopmentTeam = 8C4D9692Z4;
 						ProvisioningStyle = Automatic;
 					};
 					A53A38981DAB80C5000CC1B8 = {
@@ -283,6 +270,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EAE526EA8652CB274678946 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JhtFloatingBall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A53A387C1DAB80C4000CC1B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -298,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A53A389E1DAB80C5000CC1B8 /* JhtFloatingBallTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A53A38A91DAB80C5000CC1B8 /* JhtFloatingBallUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,9 +441,10 @@
 		};
 		A53A38AE1DAB80C5000CC1B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C89FBE838AE53681956C60 /* Pods-JhtFloatingBall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BY48QUJK83;
+				DEVELOPMENT_TEAM = 8C4D9692Z4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -454,9 +461,10 @@
 		};
 		A53A38AF1DAB80C5000CC1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F6D64F7A43203E5972CF5E7 /* Pods-JhtFloatingBall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BY48QUJK83;
+				DEVELOPMENT_TEAM = 8C4D9692Z4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
