@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.platform                   = :ios
     s.ios.deployment_target      = '8.0'
     s.source                     = { :git => 'https://github.com/jinht/FloatingBall.git', :tag => s.version }
-    s.ios.vendored_frameworks    = 'JhtFloatingBall.framework'
+    s.ios.vendored_frameworks    = 'JhtFloatingBall_SDK/JhtFloatingBall.framework'
     s.frameworks                 = 'UIKit'
 
 end
