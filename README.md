@@ -15,7 +15,7 @@
 ```oc
 platform:ios, '8.0'
 
-target 'JhtFloatingBall' do
+target '*****' do
 
 pod 'JhtFloatingBall', '~> 1.0.1'
         
