@@ -17,7 +17,7 @@ platform:ios, '8.0'
 
 target '*****' do
 
-pod 'JhtFloatingBall', '~> 1.0.1'
+pod 'JhtFloatingBall', '~> 1.0.2'
         
 end
 
