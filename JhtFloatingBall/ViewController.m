@@ -66,6 +66,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         _folatingball.delegate = self;
         // 左右两侧停靠
 //        _folatingball.stayMode = (StayMode_OnlyLeft | StayMode_OnlyRight);
+        
+        _folatingball.touchesMovedBlock = ^(CGRect frame) {
+            NSLog(@"touchesMovedBlock => %@", NSStringFromCGRect(frame));
+        };
+        
+        _folatingball.stayBlock = ^(CGRect frame) {
+            NSLog(@"touchesEndBlock => %@", NSStringFromCGRect(frame));
+        };
     }
     
     return _folatingball;

@@ -34,5 +34,12 @@
 
 @property (nonatomic, weak) id<JhtFloatingBallDelegate> delegate;
 
+/** 拖动 Block */
+typedef void(^fbTouchesMovedBlock)(CGRect frame);
+@property (nonatomic, copy) fbTouchesMovedBlock touchesMovedBlock;
+/** 停留 Block */
+typedef void(^fbStayBlock)(CGRect frame);
+@property (nonatomic, copy) fbStayBlock stayBlock;
+
 
 @end
